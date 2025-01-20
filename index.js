@@ -7,6 +7,12 @@ app.use(express.json())
 
 app.use('/api/user', userRoute)
 
+app.get("/", (req, res) => { 
+
+    res.send("Hello World")
+    console.log("My first test API is working")
+})
+
 app.post("/", (req, res) => {
     try {
         res.send("Hello World")
